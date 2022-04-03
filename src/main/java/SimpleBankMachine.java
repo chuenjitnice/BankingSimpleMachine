@@ -76,7 +76,10 @@ class MachineAction{
         account.transactionAction(Operation.Credit, amount);
     }
     protected void Withdraw(double amount){
-        account.transactionAction(Operation.Debit, amount);
+        if(account.getBalance() < amount)
+            System.out.println("----------\nSorry, your balance not enough.");
+        else
+            account.transactionAction(Operation.Debit, amount);
     }
     protected void ShowTransactionHistory(){
         Transaction[] transactionHistory = account.getTransactionHistories();

@@ -39,5 +39,4 @@ class AccountTest {
         assertEquals(100, transaction.getAmount());
         assertEquals(0, transaction.getBalance());
     }
-
 }
