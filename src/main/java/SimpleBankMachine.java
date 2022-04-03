@@ -149,6 +149,13 @@ class Transaction{
         this.balance = balance;
     }
 
+    public double getAmount() {
+        return amount;
+    }
+    public double getBalance() {
+        return balance;
+    }
+
     public String getOperationOnBook() {
         return (operation.equals(Operation.Credit)) ? "Deposited" : "Withdrawed";
     }
